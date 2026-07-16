@@ -1,7 +1,6 @@
-﻿import hid
-
-for d in hid.enumerate():
-    if "Redragon" in d["manufacturer_string"] if d["manufacturer_string"] else False:
-        print(d)
-    else:
-        print("Dispositivo não encontrado.")
+﻿import pyautogui
+import time
+for i in range(2):
+    pyautogui.press('playpause')   
+    time.sleep(1)  # Pequena pausa entre as iterações
+print("Hotkey pressed: fn + f7")

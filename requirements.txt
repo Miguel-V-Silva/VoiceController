@@ -1,4 +1,10 @@
 sounddevice
 pyautogui
 keyboard
-vosk
+faster-whisper
+rapidfuzz
+pycaw
+psutil
+pygetwindow
+numpy
+comtypes

@@ -106,7 +106,7 @@ class VoiceCommandProcessor:
             quantidade = parse_quantity(texto)
             adjust_volume(-quantidade)
 
-        if "mutar" in texto:
+        if "multa" in texto:
             self._press_key("volumemute")
 
         if self._should_stop(texto):
@@ -125,6 +125,10 @@ class VoiceCommandProcessor:
             pyautogui.write("https://www.youtube.com")
             pyautogui.press("enter")
         
+        if "copa" in texto:
+            pyautogui.write("https://www.youtube.com/live/Mh9xGj3XOPM?si=rzX9YzYC3JMCnPmv")
+            pyautogui.press("enter")
+        
         if "próximo" in texto or "próxima" in texto:
             tab(parse_quantity(texto))
             
@@ -134,6 +138,10 @@ class VoiceCommandProcessor:
         if "pesquisar" in texto or "pesquisa" in texto:
             listener = SpeechListener()
             listener.listen(search)
+       
+        
+        if "aumentar" in texto or "aumenta" in texto or "tela cheia" in texto:
+            self._press_key("f")
 
         print("Comando executado:", texto)
         return True
